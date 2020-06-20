@@ -1,2 +1,2 @@
 # two-player-pong
-A two player Pong app
+To play install and run
