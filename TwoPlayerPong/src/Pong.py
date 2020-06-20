@@ -10,7 +10,7 @@ class PongApplication(arcade.Window):
         super().__init__(settings.WINDOW_SIZE[0], settings.WINDOW_SIZE[1], settings.WINDOW_TITLE)
         self.ball_pos = settings.BALL_INIT_POS
         self.ball_step = [0, 0]  # [x, y]
-        self.ball_vel = 3
+        self.ball_vel = settings.BALL_INIT_VEL
         self.ball_deg = 0
         self.paddle_pos_1 = settings.PADDLE_INIT_POS_1
         self.paddle_pos_2 = settings.PADDLE_INIT_POS_2
@@ -108,9 +108,11 @@ class PongApplication(arcade.Window):
         )
 
     def reset(self):
+        self.ticks = 0
         self.ball_step = [0, 0]
         self.ball_pos = [500, 375]
         self.playing_the_game = 0
+        self.ball_vel = settings.BALL_INIT_VEL
 
         self.paddle_pos_1 = settings.PADDLE_INIT_POS_1
         self.paddle_pos_2 = settings.PADDLE_INIT_POS_2

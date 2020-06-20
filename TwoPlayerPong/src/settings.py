@@ -6,6 +6,7 @@ WINDOW_TITLE = 'Two Player Pong'
 BALL_INIT_POS = [WINDOW_SIZE[0] / 2, WINDOW_SIZE[1] / 2]
 BALL_RADIUS = 10
 BALL_COL = color.WHITE
+BALL_INIT_VEL = 3
 MAX_BALL_SPEED = 20  # Don't want the ball to phase through the paddles at light speed
 
 PADDLE_SIZE = [20, 120]
